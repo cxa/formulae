@@ -8,7 +8,6 @@ class Dicmd < Formula
 
   def install
     if build.head?
-      ENV.O2
       system "make", "install"
     end
 
