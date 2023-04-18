@@ -38,13 +38,6 @@ class Yabai < Formula
     EOS
   end
 
-  service do
-     run "#{opt_bin}/yabai"
-     environment_variables PATH: std_service_path_env
-     keep_alive true
-     process_type :interactive
-  end
-
   test do
     assert_match "yabai-v#{version}", shell_output("#{bin}/yabai --version")
   end
